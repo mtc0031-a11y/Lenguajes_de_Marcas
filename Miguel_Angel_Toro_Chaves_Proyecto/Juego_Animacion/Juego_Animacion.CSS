@@ -1,0 +1,59 @@
+#juego { /*El juego*/
+    width: 600px;
+    height: 200px;
+    border-bottom: 2px solid black;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#personaje { /*El personaje*/
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace; /* Para que el # se vea bien */
+}
+
+#obstaculo { /*Obstaculo*/
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    animation: mover 1.5s infinite linear;
+}
+
+@keyframes mover {
+    0% { right: -50px; }
+    100% { right: 100%; }
+}
+
+.animate-jump { /*Salto animado*/
+    animation: salto 0.5s linear;
+}
+
+@keyframes salto {
+    0% { bottom: 0; }
+    30% { bottom: 100px; }
+    70% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+#marcador { /*Marcador*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}

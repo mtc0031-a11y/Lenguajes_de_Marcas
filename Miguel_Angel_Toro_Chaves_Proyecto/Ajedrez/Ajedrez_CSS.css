@@ -1,0 +1,22 @@
+#tablero { /*este es para el tablero*/
+    display: grid;
+    grid-template-columns: repeat(8, 60px); /*Son las 8 columnas*/
+    grid-template-rows: repeat(8, 60px);    /*Son las 8 filas*/
+    border: 5px solid #333;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.casilla { /*este es para la casilla*/
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px; /* Tamaño  de las piezas como se ven */
+    cursor: default;
+}
+
+/* Colores del tablero */
+.blanca { background-color: #f0d9b5; }
+.negra { background-color: #b58863; }
